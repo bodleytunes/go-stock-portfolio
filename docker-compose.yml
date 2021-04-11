@@ -6,3 +6,9 @@ services:
     build:
       context: .
       dockerfile: ./Dockerfile
+    # delv debug stuff
+    entrypoint: dlv debug /go/src/app/main.go -l 0.0.0.0:2345 --headless=true --log=true -- server
+    ports:
+      - "2345:2345"
+    expose:
+      - "2345"
