@@ -1,6 +1,6 @@
 #build stage
 FROM golang:alpine 
-RUN apk add --no-cache git
+RUN apk add --no-cache git && apk add build-base
 # important: use delv for debugging
 RUN go get github.com/go-delve/delve/cmd/dlv 
 WORKDIR /go/src/app
