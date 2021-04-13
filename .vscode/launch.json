@@ -7,7 +7,8 @@
             "request": "attach",
             "mode": "remote",
             "host": "127.0.0.1",
-            "port": 2345
+            "port": 2345,
+            "remotePath": "/go/src/app"
         }
     ]
 }
