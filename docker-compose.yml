@@ -7,7 +7,8 @@ services:
       context: .
       dockerfile: ./Dockerfile
     # delv debug stuff
-    entrypoint: dlv debug /go/src/app/main.go -l 0.0.0.0:2345 --headless=true --log=true --api-version=2 -- server
+    #entrypoint: dlv debug /go/src/app/main.go -l 0.0.0.0:2345 --headless=true --accept-multiclient --log=true --api-version=2 -- /go/bin/go-stock-portfolio
+    entrypoint: dlv debug -l 0.0.0.0:2345 --headless=true --accept-multiclient --log=true --api-version=2 -- /go/bin/go-stock-portfolio
     ports:
       - "2345:2345"
     expose:
