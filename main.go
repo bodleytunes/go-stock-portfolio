@@ -51,6 +51,7 @@ func main() {
 
 }
 
+// New creates a new basket Basket with the given stocks.
 func New(stocks []Stock) *Basket {
 
 	// return instance of basket
@@ -60,6 +61,7 @@ func New(stocks []Stock) *Basket {
 
 }
 
+// Empty creates a new Basket but with no Stocks
 func Empty() *Basket {
 	return New([]Stock{})
 }
@@ -74,4 +76,12 @@ func (b *Basket) WeightSliceValue(weightslicevalue float32) {
 
 func (b *Basket) SumOfWeights(sumofweights float32) {
 	b.sumofweights = sumofweights
+}
+
+func (b *Basket) Percentage(percentage int) {
+	b.percentage = percentage
+}
+
+func (b *Basket) Totalexpenditure(totalexpenditure float32) {
+	b.totalexpenditure = totalexpenditure
 }
